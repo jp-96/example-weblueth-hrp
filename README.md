@@ -1,11 +1,15 @@
-# vscode-react-parcel
+# example-weblueth-hrs
 
-Running React App on [GitHub Pages](https://jp-rad.github.io/vscode-react-parcel/) as a web app.  
+`@weblueth/hrs`ライブラリを使った`Web Bluetooth`によるハートレートモニターのサンプルアプリです。
+
+reactなWebアプリとして、 [GitHub Pages](https://jp-96.github.io/example-weblueth-hrs/)上で、試すことができます。  
 
 **Example**
 ``` App.tsx
 // App.tsx
-
+import React from 'react';
+import { HeartRateContextProvider } from '@weblueth/hrs';
+import HeartRateDevice from './components/HeartRateDevice';
 import Logo from './Logo';  // logo.svg ==> Logo.tsx
 //import './App.css'; // ==> ../index.html
 
@@ -25,6 +29,11 @@ function App() {
         >
           Learn React
         </a>
+        <p>
+          <HeartRateContextProvider connectionName='Heart Rate' bluetooth={window.navigator.bluetooth}>
+            <HeartRateDevice />
+          </HeartRateContextProvider>
+        </p>
       </header>
     </div>
   );
@@ -69,6 +78,33 @@ https://github.com/jp-rad/vscode-react-parcel.git
 （`[Ctrl]+[C]`で終了します）
 1. ビルドを実行するには、ターミナルを開いて、`yarn build`コマンドを実行します(`packege.json`で定義)  
 （`.build`フォルダ内に生成されます）
+
+## パッケージのインストール
+
+**追加するパッケージ**
+- @weblueth/hrs
+- @types/web-bluetooth
+
+```bash
+yarn add --dev @weblueth/hrs @types/web-bluetooth
+```
+
+## ソースコードの編集
+
+1. `./src/app/components/HeartRateDevice.tsx` を追加します。
+2. `./src/app/App.tsx` を編集します。
+3. ターミナルで、`yarn start`コマンドを実行し、ウェブブラウザで、[http://localhost:1234](http://localhost:1234)を開きます
+
+## アプリの使い方
+
+1. BLE対応のハートレートモニターを装着します
+1. `REQUEST`ボタンをクリックし、デバイスを選択します（ペア設定）
+1. ハートレートモニターを選択するとデバイス名(`Name`)が表示され、接続を待ちます
+1. 接続に成功すると装着部位(`Loaction`)とハートレート(`Heart Rate`)が表示されます
+1. 接続中に`Read battery level`ボタンをクリックすると、バッテリーレベルが表示されます
+1. `DISCONNECT`ボタンをクリックすると切断します
+1. 切断後は、`CONNECT`ボタンで再接続できます
+
 
 ## ウェブアプリのデプロイ
 
