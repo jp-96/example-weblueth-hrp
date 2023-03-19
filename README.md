@@ -1,14 +1,14 @@
-# example-weblueth-hrs
+# example-weblueth-hrp
 
-`@weblueth/hrs`ライブラリを使った`Web Bluetooth`によるハートレートモニターのサンプルアプリです。
+`@weblueth/hrp`ライブラリを使った`Web Bluetooth`によるハートレートモニターのサンプルアプリです。
 
-reactなWebアプリとして、 [GitHub Pages](https://jp-96.github.io/example-weblueth-hrs/)上で、試すことができます。  
+reactなWebアプリとして、 [GitHub Pages](https://jp-96.github.io/example-weblueth-hrp/)上で、試すことができます。  
 
 **Example**
 ``` App.tsx
 // App.tsx
 import React from 'react';
-import { HeartRateContextProvider } from '@weblueth/hrs';
+import { HeartRateContextProvider } from '@weblueth/hrp';
 import HeartRateDevice from './components/HeartRateDevice';
 import Logo from './Logo';  // logo.svg ==> Logo.tsx
 //import './App.css'; // ==> ../index.html
@@ -82,11 +82,11 @@ https://github.com/jp-rad/vscode-react-parcel.git
 ## パッケージのインストール
 
 **追加するパッケージ**
-- @weblueth/hrs
+- @weblueth/hrp
 - @types/web-bluetooth
 
 ```bash
-yarn add --dev @weblueth/hrs @types/web-bluetooth
+yarn add --dev @weblueth/hrp @types/web-bluetooth
 ```
 
 ## ソースコードの編集
