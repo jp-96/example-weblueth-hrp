@@ -1,7 +1,7 @@
 import React, { useCallback, useState } from 'react';
 import { WbBoundCallback } from '@weblueth/statemachine';
 import { useWbxActor, WbxCustomEventCallback, WbxDevice, WbxServices } from '@weblueth/react';
-import { HeartRate, HeartRateMeasurement, HeartRateService, Services } from '@weblueth/hrs';
+import { HeartRate, HeartRateMeasurement, HeartRateService, Services } from '@weblueth/hrp';
 
 function convLocation(sensorLocation: any) {
     switch (sensorLocation) {

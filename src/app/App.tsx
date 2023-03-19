@@ -1,5 +1,5 @@
 import React from 'react';
-import { HeartRateContextProvider } from '@weblueth/hrs';
+import { HeartRateContextProvider } from '@weblueth/hrp';
 import HeartRateDevice from './components/HeartRateDevice';
 import Logo from './Logo';  // logo.svg ==> Logo.tsx
 //import './App.css'; // ==> ../index.html
