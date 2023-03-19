@@ -3015,10 +3015,10 @@
   dependencies:
     events "^3.3.0"
 
-"@weblueth/hrs@^0.0.4":
-  version "0.0.4"
-  resolved "https://registry.yarnpkg.com/@weblueth/hrs/-/hrs-0.0.4.tgz#e8ec881b426fc6141380269a964630a2f2fd55ff"
-  integrity sha512-xY7p+XXFdCwk0ZzRDK7eXyTFfMycQrfkrnh01FZJEQoT/j7ll1Fv9PAYJ77+gAC2B02JV2oJnY1d2GJrr3dx/A==
+"@weblueth/hrp@^0.0.5":
+  version "0.0.5"
+  resolved "https://registry.yarnpkg.com/@weblueth/hrp/-/hrp-0.0.5.tgz#edf6c7ea5507e3739f1dcdb98576a5cc6295be3e"
+  integrity sha512-rPchwIgQavxk9fa3LfKXNvGPzNEghyC7r15GkU7zxAhzCBnKjMwuOfAq/rq+wwJjtKEs62ukiEeoIewhBfmG6A==
   dependencies:
     "@weblueth/gattbuilder" "^0.0.4"
     "@weblueth/react" "^0.0.4"
